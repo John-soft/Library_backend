@@ -1,8 +1,8 @@
-const { connect } = require("mongoose");
+const mongoose = require("mongoose");
 
 const connectDB = async (url) => {
   try {
-    connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
+    mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
     console.log("DB connection successful");
   } catch (error) {
     console.log("Database Error");
