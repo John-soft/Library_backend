@@ -2,7 +2,7 @@ const { connect } = require("mongoose");
 
 const connectDB = async (url) => {
   try {
-    connect(url);
+    connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
     console.log("DB connection successful");
   } catch (error) {
     console.log("Database Error");
